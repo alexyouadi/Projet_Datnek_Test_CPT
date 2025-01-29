@@ -15,7 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@datnek-app/events": ["libs/src/index.ts"]
+      "@datnek-app/events": ["libs/src/index.ts"],
+      
+      
     }
   },
   "exclude": ["node_modules", "tmp"]

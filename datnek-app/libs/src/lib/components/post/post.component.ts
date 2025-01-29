@@ -8,4 +8,19 @@ import { CommonModule } from '@angular/common';
   templateUrl: './post.component.html',
   styleUrl: './post.component.css',
 })
-export class PostComponent {}
+export class PostComponent {
+
+  
+
+
+
+  ouvertureModal(){
+
+    return 
+  }
+
+
+
+
+
+}
