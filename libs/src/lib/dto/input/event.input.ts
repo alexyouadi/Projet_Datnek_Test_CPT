@@ -7,8 +7,9 @@ export namespace EventInput{
     export interface Create {
   
       id: number;
+      photoProfil:string;
       nom: string;
-      dateDebut: Date;
+      dateDebut: string;
       typeEvenement: string;
       meetingLink: string;
       addresse: string;
@@ -17,6 +18,7 @@ export namespace EventInput{
       dateFin: string;
       description:string;
       organisateur:string;
+      showMenu: boolean;
       
   
    }
@@ -25,7 +27,8 @@ export namespace EventInput{
   
      id: number;
      nom: string;
-     dateDebut: Date;
+     photoProfil:string;
+     dateDebut:string;
      meetingLink: string;
      addresse: string;
      heurDebut: string;
@@ -34,6 +37,9 @@ export namespace EventInput{
      description:string;
      organisateur:string;
      typeEvenement: string;
+     
+  showMenu: boolean;
+    
   
    }
   
@@ -46,8 +52,9 @@ export namespace EventInput{
   
      id: number;
      nom: string;
-     dateDebut: Date;
+     dateDebut: string;
      meetingLink: string;
+     photoProfil:string;
      addresse: string;
      heurDebut: string;
      heurFin: string;
@@ -55,6 +62,9 @@ export namespace EventInput{
      typeEvenement: string;
      description:string;
      organisateur:string;
+     showMenu: boolean;
+   
+ 
   
    }
   

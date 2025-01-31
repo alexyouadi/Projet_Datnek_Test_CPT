@@ -273,7 +273,7 @@ export class EventState {
    //Aucune charge utile d'action n'est nécessaire pour obtenir tous les événements
     return this.eventservice.recupererToutLesEvenement().pipe(
 
-      tap((result: EventOutput.Get[]) => {
+      tap( (result: EventOutput.Get[]) => {
 
         const state = contex.getState();
 

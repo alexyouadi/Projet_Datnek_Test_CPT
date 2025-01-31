@@ -5,7 +5,7 @@ export namespace EventOutput {
     export interface Create {
       id: number;
       nom: string;
-      dateDebut: Date;
+      dateDebut: string;
       typeEvenement: string;
       meetingLink: string;
       addresse: string;
@@ -14,15 +14,18 @@ export namespace EventOutput {
       dateFin: string;
       description:string;
       organisateur:string;
-      showMenu: boolean; 
+      photoProfil:string;
+      showMenu: boolean;
+     
 
   }
 
   export interface Get {
     id: number;
       nom: string;
-      dateDebut: Date;
+      dateDebut: string;
       typeEvenement: string;
+      photoProfil:string;
       meetingLink: string;
       addresse: string;
       heurDebut: string;
@@ -30,7 +33,8 @@ export namespace EventOutput {
       dateFin: string;
       description:string;
       organisateur:string;
-      showMenu: boolean; 
+      showMenu: boolean;
+      
 
   }
 
@@ -39,18 +43,20 @@ export namespace EventOutput {
   }
 
   export interface Update {
-    
+
     id: number;
     nom: string;
-    dateDebut: Date;
+    dateDebut: string;
     meetingLink: string;
     addresse: string;
+    photoProfil:string;
     heurDebut: string;
     heurFin: string;
     dateFin: string;
     description:string;
     organisateur:string;
     typeEvenement: string;
+    showMenu: boolean;
 
   }
 

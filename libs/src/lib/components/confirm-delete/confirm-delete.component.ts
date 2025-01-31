@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Inject, Output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'datnek-app-confirm-delete',
@@ -8,4 +9,35 @@ import { CommonModule } from '@angular/common';
   templateUrl: './confirm-delete.component.html',
   styleUrl: './confirm-delete.component.css',
 })
-export class ConfirmDeleteComponent {}
+export class ConfirmDeleteComponent {
+
+
+  @Output() confirmer = new EventEmitter<boolean>();
+
+  constructor(@Inject(ToastrService) private toastr: ToastrService ){}
+
+
+
+  confirmeSupresion(){
+
+    this.confirmer.emit(true);
+    
+    this.toastr.success('poste supprimer avec succès !', 'Succès', {
+
+      timeOut: 3000,
+
+      positionClass: 'toast-top-right',
+
+    });
+  
+  }
+
+
+  annuler(){
+
+    this.confirmer.emit(false);
+  }
+}
+
+ 
+
